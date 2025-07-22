@@ -38,6 +38,16 @@ const button = document.getElementById("interruttore")
 
 //osservo l'ogetto recuperato. appena viene cliccato faccio partire la funzione interruttore
 button.addEventListener("click", () => {
+    let interruttore = document.getElementById("interruttore")
+    const testoInterruttore = interruttore.innerText
+
     document.getElementById("lamp-on").classList.toggle("d-none");
     document.getElementById("lamp-off").classList.toggle("d-none");
+
+    if (testoInterruttore.includes("Accendi")) {
+        interruttore.innerText = "Spegni"
+    } else {
+        interruttore.innerText = "Accendi"
+    }
+
 })
