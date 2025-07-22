@@ -42,7 +42,7 @@ button.addEventListener("click", () => {
     const testoInterruttore = button.innerText
 
     document.getElementById("lamp-on").classList.toggle("d-none");
-    document.getElementById("lmp-off").classList.toggle("d-none");
+    document.getElementById("lamp-off").classList.toggle("d-none");
 
     if (testoInterruttore.includes("Accendi")) {
         button.innerText = "Spegni"
