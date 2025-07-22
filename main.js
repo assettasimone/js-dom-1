@@ -18,11 +18,11 @@ button.addEventListener("click", interruttore)
     const statoLampadina = lampadina.src;
 
     if (statoLampadina.includes("white_lamp.png")) {
-        lampadina.src = 'http://127.0.0.1:3000/img/yellow_lamp.png'
+        lampadina.src = './img/yellow_lamp.png'
 
 
     } else {
-         lampadina.src = 'http://127.0.0.1:3000/img/white_lamp.png'
+         lampadina.src = './img/white_lamp.png'
 
 
     }
@@ -38,16 +38,16 @@ const button = document.getElementById("interruttore")
 
 //osservo l'ogetto recuperato. appena viene cliccato faccio partire la funzione interruttore
 button.addEventListener("click", () => {
-    let interruttore = document.getElementById("interruttore")
-    const testoInterruttore = interruttore.innerText
+
+    const testoInterruttore = button.innerText
 
     document.getElementById("lamp-on").classList.toggle("d-none");
-    document.getElementById("lamp-off").classList.toggle("d-none");
+    document.getElementById("lmp-off").classList.toggle("d-none");
 
     if (testoInterruttore.includes("Accendi")) {
-        interruttore.innerText = "Spegni"
+        button.innerText = "Spegni"
     } else {
-        interruttore.innerText = "Accendi"
+        button.innerText = "Accendi"
     }
 
 })
