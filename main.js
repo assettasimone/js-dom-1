@@ -36,15 +36,8 @@ button.addEventListener("click", interruttore)
 //recupero l'interruttore
 const button = document.getElementById("interruttore")
 
-//controllo se è recuperato
-console.log(button)
-
 //osservo l'ogetto recuperato. appena viene cliccato faccio partire la funzione interruttore
-button.addEventListener("click", interruttore)
-
-
-
-function interruttore() {
+button.addEventListener("click", () => {
     document.getElementById("lamp-on").classList.toggle("d-none");
     document.getElementById("lamp-off").classList.toggle("d-none");
-}
+})
