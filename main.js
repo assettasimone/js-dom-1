@@ -45,19 +45,6 @@ button.addEventListener("click", interruttore)
 
 
 function interruttore() {
-    // creo un array con le classi della lampadina spenta
-    const lampOffClass = document.getElementById("lamp-off").classList
-
-
-    //controllo se ha la classe d-none
-    if (lampOffClass.contains("d-none")) {
-        document.getElementById("lamp-on").classList.toggle("d-none");
-        document.getElementById("lamp-off").classList.toggle("d-none");
-    } else {
-        document.getElementById("lamp-on").classList.toggle("d-none");
-        document.getElementById("lamp-off").classList.toggle("d-none");
-
-    }
-
-
+    document.getElementById("lamp-on").classList.toggle("d-none");
+    document.getElementById("lamp-off").classList.toggle("d-none");
 }
