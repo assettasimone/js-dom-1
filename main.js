@@ -1,4 +1,4 @@
-// recupero l'interruttore e lo inserisco in un const
+/*// recupero l'interruttore e lo inserisco in un const
 const button = document.getElementById("interruttore")
 
 //controllo se è recuperato
@@ -8,7 +8,9 @@ console.log(button)
 button.addEventListener("click", interruttore)
 
 
-function interruttore() {
+
+//questo metodo funziona, ma non mi fa impazzire perchè devo inserire l'url esatto e non è un metodo universale
+ function interruttore() {
     //recupero l'ogetto lampadina
     const lampadina = document.getElementById("lamp")
 
@@ -16,11 +18,26 @@ function interruttore() {
     const statoLampadina = lampadina.src;
 
     if (statoLampadina.includes("white_lamp.png")) {
-        console.log('white lamp');
+        lampadina.src = 'http://127.0.0.1:3000/img/yellow_lamp.png'
+
 
     } else {
-        console.log('yellow lamp');
+         lampadina.src = 'http://127.0.0.1:3000/img/white_lamp.png'
+
+
     }
+
+
+} */
+
+
+//cambio approccio agendo su la visibilità del css
+
+
+
+
+function interruttore() {
+
 
 
 }
