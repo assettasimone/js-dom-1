@@ -1,14 +1,26 @@
+// recupero l'interruttore e lo inserisco in un const
 const button = document.getElementById("interruttore")
 
-console.log('button')
+//controllo se è recuperato
+console.log(button)
 
-button.document.addEventListener("click", interruttore)
+//osservo l'ogetto recuperato. appena viene cliccato faccio partire la funzione interruttore
+button.addEventListener("click", interruttore)
 
 
 function interruttore() {
-    const statoLampadina = false;
+    //recupero l'ogetto lampadina
+    const lampadina = document.getElementById("lamp")
 
+    //recupero l'immagine attuale della lampadina
+    const statoLampadina = lampadina.src;
 
+    if (statoLampadina.includes("white_lamp.png")) {
+        console.log('white lamp');
+
+    } else {
+        console.log('yellow lamp');
+    }
 
 
 }
